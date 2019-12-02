@@ -1,0 +1,6 @@
+framework module Pods_EventMaster827 {
+  umbrella header "Pods-EventMaster827-umbrella.h"
+
+  export *
+  module * { export * }
+}

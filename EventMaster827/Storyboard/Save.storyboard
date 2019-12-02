@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gw3-0K-JMM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bookmark View Controller-->
+        <scene sceneID="OGH-gs-KR3">
+            <objects>
+                <viewController storyboardIdentifier="BookmarkViewController" id="4tt-Zz-cKp" customClass="BookmarkViewController" customModule="EventMaster827" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nor-eC-7iw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HSh-cT-Ezd">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4tt-Zz-cKp" id="NOM-c4-nAo"/>
+                                    <outlet property="delegate" destination="4tt-Zz-cKp" id="swu-Bv-25M"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HSh-cT-Ezd" firstAttribute="leading" secondItem="XDV-8B-IvA" secondAttribute="leading" id="Mea-HQ-DCR"/>
+                            <constraint firstItem="XDV-8B-IvA" firstAttribute="bottom" secondItem="HSh-cT-Ezd" secondAttribute="bottom" id="iU9-2C-4SV"/>
+                            <constraint firstItem="XDV-8B-IvA" firstAttribute="trailing" secondItem="HSh-cT-Ezd" secondAttribute="trailing" id="m9L-u8-wTJ"/>
+                            <constraint firstItem="HSh-cT-Ezd" firstAttribute="top" secondItem="XDV-8B-IvA" secondAttribute="top" id="zFB-hk-dBB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XDV-8B-IvA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6yw-Ym-hi2"/>
+                    <connections>
+                        <outlet property="bookMarkTableView" destination="HSh-cT-Ezd" id="wce-3T-SfA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEL-Ii-ESz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138.4000000000001" y="-0.44977511244377816"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Uw9-61-6Yu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gw3-0K-JMM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="InF-uu-Kbg"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oaD-bg-k5a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4tt-Zz-cKp" kind="relationship" relationship="rootViewController" id="1Lv-yv-Bn1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpa-vu-VSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199.19999999999999" y="-0.44977511244377816"/>
+        </scene>
+    </scenes>
+</document>
